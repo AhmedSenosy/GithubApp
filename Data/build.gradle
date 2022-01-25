@@ -17,6 +17,7 @@ dependencies {
     testImplementation dataTestDependencies.assertj
 //    testImplementation dataTestDependencies.kotlinJUnit
     testImplementation dataTestDependencies.robolectric
+    testImplementation dataTestDependencies.inline
 }
 
 java {

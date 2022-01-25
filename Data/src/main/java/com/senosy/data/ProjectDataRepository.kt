@@ -45,13 +45,10 @@ class ProjectDataRepository @Inject constructor(
         return dataStoreFactory.getCachedDataStore().setProjectAsNotBookmarked(projectId)
     }
 
-    override fun getBookmarkedProject(projectId: String): Observable<List<Project>> {
+    override fun getBookmarkedProject(): Observable<List<Project>> {
         return dataStoreFactory.getCachedDataStore().getBookmarkedProjects().map {
             it.map { mapper.mapFromEntity(it) }
         }
     }
 
-    override fun getBookmarkedProjects(): Observable<List<Project>> {
-        TODO("Not yet implemented")
-    }
 }
