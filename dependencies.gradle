@@ -1,3 +1,19 @@
-ext{
-
+project.ext {
+    //Android
+    androidBuildToolsVersion = "26.0.0"
+    androidMinSDKVersion = 23
+    androidTargetSdkVersion = 31
+    androidCompileSdkVersion = 31
+    kotlinVersion = '1.7.0'
+    //Libraries
+    supportLibraryVersion= '26.0.1'
+    rxJava = '3.0.0'
+    javaxAnnotationVersion ='1.0'
+    javaxInjectoVersion ='1'
+    //DomainDependencies
+    domainDependencies =[
+            rxJava: "io.reactivex.rxjava3:rxjava:${rxJava}",
+            javaInject: "javax.inject:javax.inject:${javaxInjectoVersion}",
+            javaxAnnotation:"javax.annotation:jsr250-api:${javaxAnnotationVersion}"
+    ]
 }
