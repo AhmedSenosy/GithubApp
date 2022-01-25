@@ -15,10 +15,10 @@ project.ext {
     daggerVersion = '2.11'
     //test
     junit = '4.13.2'
-    mockitoVersion ='4.0.0'
+    mockitoVersion ='4.3.1'
     assertj = '3.22.0'
-    robolectricVersion ='3.4.2'
-    mockitoKotlinVersion = '1.9.5'
+    robolectricVersion ='4.7.3'
+    mockitoKotlinVersion = '4.0.0'
     mockitoInline ='2.13.0'
     //DomainDependencies
     domainDependencies =[
@@ -36,7 +36,6 @@ project.ext {
     dataDependencies =[
             javaInject: "javax.inject:javax.inject:${javaxInjectoVersion}",
             javaxAnnotation:"javax.annotation:jsr250-api:${javaxAnnotationVersion}",
-//            kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jre8:${rxKotlinVersion}",
             rxJava: "io.reactivex.rxjava3:rxkotlin:${rxJava}",
     ]
     //data test dependencies
@@ -44,7 +43,6 @@ project.ext {
             junit : "junit:junit:${junit}",
             mockito : "org.mockito.kotlin:mockito-kotlin:${mockitoVersion}",
             assertj: "org.assertj:assertj-core:${assertj}",
-//            kotlinJUnit:"org.jetbrains.kotlin:kotlin-test-junit:${kotlinVersion}",
             robolectric:"org.robolectric:robolectric:${robolectricVersion}",
             inline : "org.mockito:mockito-inline:${mockitoInline}"
     ]

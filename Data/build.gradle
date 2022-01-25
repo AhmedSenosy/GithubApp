@@ -8,7 +8,7 @@ dependencies {
     implementation dataDependencies.javaInject
     implementation dataDependencies.javaxAnnotation
     implementation dataDependencies.rxJava
-//    implementation dataDependencies.kotlin
+
 
     implementation project(":Domain")
 
