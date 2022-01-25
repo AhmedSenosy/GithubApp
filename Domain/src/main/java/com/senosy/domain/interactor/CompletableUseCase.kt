@@ -14,12 +14,13 @@ abstract class CompletableUseCase< in Params> constructor(
 ) {
     private val disposables = CompositeDisposable()
 
-    protected abstract fun buildUseCaseObservable(params: Params? = null): Completable
+    abstract fun buildUseCaseObservable(params: Params? = null): Completable
 
     open fun execute(observer: DisposableCompletableObserver, params: Params? = null) {
         val completable = this.buildUseCaseObservable(params).subscribeOn(Schedulers.io())
             .observeOn(postExecutionThread.scheduler)
-        addObservable(observable.subscribeWith(completable))
+
+        addObservable(completable.subscribeWith(observer))
     }
 
     fun dispose() {
