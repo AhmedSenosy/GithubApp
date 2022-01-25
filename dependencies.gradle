@@ -17,7 +17,7 @@ project.ext {
     junit = '4.13.2'
     mockitoVersion ='4.3.1'
     assertj = '3.22.0'
-    robolectricVersion ='4.7.3'
+    robolectricVersion ='3.4.2'
     mockitoKotlinVersion = '4.0.0'
     mockitoInline ='2.13.0'
     //DomainDependencies
