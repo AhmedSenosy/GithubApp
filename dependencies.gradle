@@ -29,7 +29,7 @@ project.ext {
     //domain test dependencies
     domainTestDependencies =[
             junit : "junit:junit:${junit}",
-            mockito : "org.mockito.kotlin:mockito-kotlin:${mockitoVersion}",
+            mockito : "org.mockito.kotlin:mockito-kotlin:${mockitoKotlinVersion}",
             assertj: "org.assertj:assertj-core:${assertj}"
     ]
     //dataDependencies
@@ -41,7 +41,7 @@ project.ext {
     //data test dependencies
     dataTestDependencies =[
             junit : "junit:junit:${junit}",
-            mockito : "org.mockito.kotlin:mockito-kotlin:${mockitoVersion}",
+            mockito : "org.mockito.kotlin:mockito-kotlin:${mockitoKotlinVersion}",
             assertj: "org.assertj:assertj-core:${assertj}",
             robolectric:"org.robolectric:robolectric:${robolectricVersion}",
             inline : "org.mockito:mockito-inline:${mockitoInline}"
