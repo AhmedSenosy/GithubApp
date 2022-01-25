@@ -12,4 +12,6 @@ interface ProjectsRepository {
     fun unBookmarkProject(projectId:String) : Completable
 
     fun getBookmarkedProject(projectId:String) : Observable<List<Project>>
+
+    fun getBookmarkedProjects() : Observable<List<Project>>
 }

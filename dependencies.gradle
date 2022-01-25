@@ -10,10 +10,20 @@ project.ext {
     rxJava = '3.0.0'
     javaxAnnotationVersion ='1.0'
     javaxInjectoVersion ='1'
+    //test
+    junit = '4.13.2'
+    mockito ='4.0.0'
+    assertj = '3.22.0'
     //DomainDependencies
     domainDependencies =[
             rxJava: "io.reactivex.rxjava3:rxjava:${rxJava}",
             javaInject: "javax.inject:javax.inject:${javaxInjectoVersion}",
             javaxAnnotation:"javax.annotation:jsr250-api:${javaxAnnotationVersion}"
+    ]
+    //domain test dependencies
+    domainTestDependencies =[
+            junit : "junit:junit:${junit}",
+            mockito : "org.mockito.kotlin:mockito-kotlin:${mockito}",
+            assertj: "org.assertj:assertj-core:${assertj}"
     ]
 }
