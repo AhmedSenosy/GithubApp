@@ -71,6 +71,7 @@ project.ext {
             assertJ      : "org.assertj:assertj-core:$assertj",
             mockitoKotlin: "org.mockito.kotlin:mockito-kotlin:$mockitoKotlinVersion",
             testRunner   : "androidx.test:runner:$axTestRunner",
-            testRules    : "androidx.test:rules:$axTestRules"
+            testRules    : "androidx.test:rules:$axTestRules",
+            inline     : "org.mockito:mockito-inline:${mockitoInline}"
     ]
 }
