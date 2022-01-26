@@ -1,0 +1,35 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+}
+
+dependencies {
+
+    dependencies {
+        def remoteDependencies = rootProject.ext.remoteDependencies
+        def remoteTestDependencies = rootProject.ext.remoteTestDependencies
+        implementation project(':Data')
+
+        implementation remoteDependencies.rxJava
+        implementation remoteDependencies.gson
+        implementation remoteDependencies.javaxAnnotations
+        implementation remoteDependencies.javaxInject
+        implementation remoteDependencies.okhttp
+        implementation remoteDependencies.okhttpInterceptor
+        implementation remoteDependencies.retrofit
+        implementation remoteDependencies.retrofitConverter
+        implementation remoteDependencies.retrofitAdapter
+
+        testImplementation remoteTestDependencies.junit
+        testImplementation remoteTestDependencies.assertJ
+        testImplementation remoteTestDependencies.mockitoKotlin
+        testImplementation remoteTestDependencies.testRunner
+        testImplementation remoteTestDependencies.testRules
+        testImplementation remoteTestDependencies.inline
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}

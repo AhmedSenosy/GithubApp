@@ -10,3 +10,4 @@ rootProject.name = "GithubTrending"
 include ':app'
 include ':Domain'
 include ':Data'
+include ':Remote'
