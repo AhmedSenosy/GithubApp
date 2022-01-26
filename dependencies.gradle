@@ -87,7 +87,6 @@ project.ext {
             rxJava            : "io.reactivex.rxjava3:rxkotlin:${rxJava}",
             javaxAnnotations  : "javax.annotation:jsr250-api:$javaxAnnotationVersion",
             javaxInject       : "javax.inject:javax.inject:$javaxInjectoVersion",
-            androidAnnotations: "androidx.annotation:annotation:$androidAnnotationVersion",
             roomRuntime       : "androidx.room:room-runtime:$roomVersion",
             roomCompiler      : "androidx.room:room-compiler:$roomVersion",
             roomRxJva         : "androidx.room:room-rxjava2:$roomVersion",

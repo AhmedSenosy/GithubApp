@@ -10,8 +10,8 @@ import com.senosy.cache.db.ProjectConstants.QUERY_EXISTS
 import com.senosy.cache.db.ProjectConstants.QUERY_PROJECTS
 import com.senosy.cache.db.ProjectConstants.QUERY_UPDATE_BOOKMARK_STATUS
 import com.senosy.cache.model.CachedProject
-import io.reactivex.Observable
-import io.reactivex.Single
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.core.Single
 
 @Dao
 abstract class CachedProjectsDao {

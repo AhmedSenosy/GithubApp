@@ -45,7 +45,8 @@ dependencies {
     implementation cacheDependencies.gson
     implementation cacheDependencies.javaxAnnotations
     implementation cacheDependencies.javaxInject
-    implementation cacheDependencies.androidAnnotations
+    implementation cacheDependencies.rxJava
+
     implementation cacheDependencies.roomRuntime
     implementation cacheDependencies.roomRxJva
     implementation cacheDependencies.appCompat
@@ -60,6 +61,6 @@ dependencies {
     testImplementation cacheTestDependencies.testCore
     testImplementation cacheTestDependencies.robolectric
     kapt cacheDependencies.daggerCompiler
-    kapt cacheDependencies.roomCompiler
+    annotationProcessor cacheDependencies.roomCompiler
 
 }
