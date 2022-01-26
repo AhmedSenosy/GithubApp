@@ -6,6 +6,7 @@ project.ext {
     androidCompileSdkVersion = 31
     kotlinVersion = '1.7.0'
     //Libraries
+    axAppcompat = '1.1.0-alpha01'
     supportLibraryVersion = '26.0.1'
     rxJava = '3.0.1'
     javaxAnnotationVersion = '1.0'
@@ -16,6 +17,8 @@ project.ext {
     gsonVersion = '2.8.1'
     okhttpVersion = '3.8.1'
     retrofitVersion = '2.3.0'
+
+    roomVersion = '2.1.0-alpha03'
     //test
     junit = '4.13.2'
     mockitoVersion = '4.3.1'
@@ -26,6 +29,8 @@ project.ext {
     axTestRunner = '1.1.1'
     axTestRules = '1.1.1'
     axTestCore = '1.1.0'
+    archCoreTestingVersion = '2.0.0'
+
     //DomainDependencies
     domainDependencies = [
             rxJava         : "io.reactivex.rxjava3:rxkotlin:${rxJava}",
@@ -73,5 +78,30 @@ project.ext {
             testRunner   : "androidx.test:runner:$axTestRunner",
             testRules    : "androidx.test:rules:$axTestRules",
             inline     : "org.mockito:mockito-inline:${mockitoInline}"
+    ]
+    // Cache
+    cacheDependencies = [
+            daggerCompiler    : "com.google.dagger:dagger-compiler:$daggerVersion",
+            dagger            : "com.google.dagger:dagger:$daggerVersion",
+            gson              : "com.google.code.gson:gson:$gsonVersion",
+            rxJava            : "io.reactivex.rxjava3:rxkotlin:${rxJava}",
+            javaxAnnotations  : "javax.annotation:jsr250-api:$javaxAnnotationVersion",
+            javaxInject       : "javax.inject:javax.inject:$javaxInjectoVersion",
+            roomRuntime       : "androidx.room:room-runtime:$roomVersion",
+            roomCompiler      : "androidx.room:room-compiler:$roomVersion",
+            roomRxJva         : "androidx.room:room-rxjava2:$roomVersion",
+            appCompat         : "androidx.appcompat:appcompat:$axAppcompat"
+    ]
+
+    cacheTestDependencies = [
+            junit        : "junit:junit:$junit",
+            assertJ      : "org.assertj:assertj-core:$assertj",
+            mockitoKotlin: "org.mockito.kotlin:mockito-kotlin:$mockitoKotlinVersion",
+            roomTesting  : "androidx.room:room-testing:$roomVersion",
+            archTesting  : "androidx.arch.core:core-testing:$archCoreTestingVersion",
+            testRunner   : "androidx.test:runner:$axTestRunner",
+            testRules    : "androidx.test:rules:$axTestRules",
+            testCore     : "androidx.test:core:$axTestCore",
+            robolectric  : "org.robolectric:robolectric:$robolectricVersion"
     ]
 }
