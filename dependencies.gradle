@@ -6,44 +6,71 @@ project.ext {
     androidCompileSdkVersion = 31
     kotlinVersion = '1.7.0'
     //Libraries
-    supportLibraryVersion= '26.0.1'
+    supportLibraryVersion = '26.0.1'
     rxJava = '3.0.1'
-    javaxAnnotationVersion ='1.0'
-    javaxInjectoVersion ='1'
+    javaxAnnotationVersion = '1.0'
+    javaxInjectoVersion = '1'
     rxKotlinVersion = '2.1.0'
     androidAnnotationVersion = '21.0.3'
     daggerVersion = '2.11'
+    gsonVersion = '2.8.1'
+    okhttpVersion = '3.8.1'
+    retrofitVersion = '2.3.0'
     //test
     junit = '4.13.2'
-    mockitoVersion ='4.3.1'
+    mockitoVersion = '4.3.1'
     assertj = '3.22.0'
-    robolectricVersion ='3.4.2'
+    robolectricVersion = '3.4.2'
     mockitoKotlinVersion = '4.0.0'
-    mockitoInline ='2.13.0'
+    mockitoInline = '2.13.0'
+    axTestRunner = '1.1.1'
+    axTestRules = '1.1.1'
+    axTestCore = '1.1.0'
     //DomainDependencies
-    domainDependencies =[
-            rxJava: "io.reactivex.rxjava3:rxkotlin:${rxJava}",
-            javaInject: "javax.inject:javax.inject:${javaxInjectoVersion}",
-            javaxAnnotation:"javax.annotation:jsr250-api:${javaxAnnotationVersion}"
+    domainDependencies = [
+            rxJava         : "io.reactivex.rxjava3:rxkotlin:${rxJava}",
+            javaInject     : "javax.inject:javax.inject:${javaxInjectoVersion}",
+            javaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}"
     ]
     //domain test dependencies
-    domainTestDependencies =[
-            junit : "junit:junit:${junit}",
-            mockito : "org.mockito.kotlin:mockito-kotlin:${mockitoKotlinVersion}",
+    domainTestDependencies = [
+            junit  : "junit:junit:${junit}",
+            mockito: "org.mockito.kotlin:mockito-kotlin:${mockitoKotlinVersion}",
             assertj: "org.assertj:assertj-core:${assertj}"
     ]
     //dataDependencies
-    dataDependencies =[
-            javaInject: "javax.inject:javax.inject:${javaxInjectoVersion}",
-            javaxAnnotation:"javax.annotation:jsr250-api:${javaxAnnotationVersion}",
-            rxJava: "io.reactivex.rxjava3:rxkotlin:${rxJava}",
+    dataDependencies = [
+            javaInject     : "javax.inject:javax.inject:${javaxInjectoVersion}",
+            javaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            rxJava         : "io.reactivex.rxjava3:rxkotlin:${rxJava}",
     ]
     //data test dependencies
-    dataTestDependencies =[
-            junit : "junit:junit:${junit}",
-            mockito : "org.mockito.kotlin:mockito-kotlin:${mockitoKotlinVersion}",
-            assertj: "org.assertj:assertj-core:${assertj}",
-            robolectric:"org.robolectric:robolectric:${robolectricVersion}",
-            inline : "org.mockito:mockito-inline:${mockitoInline}"
+    dataTestDependencies = [
+            junit      : "junit:junit:${junit}",
+            mockito    : "org.mockito.kotlin:mockito-kotlin:${mockitoKotlinVersion}",
+            assertj    : "org.assertj:assertj-core:${assertj}",
+            robolectric: "org.robolectric:robolectric:${robolectricVersion}",
+            inline     : "org.mockito:mockito-inline:${mockitoInline}"
+    ]
+    //RemoteDependencies
+    remoteDependencies = [
+            rxJava            : "io.reactivex.rxjava3:rxkotlin:${rxJava}",
+            gson              : "com.google.code.gson:gson:$gsonVersion",
+            javaxAnnotations  : "javax.annotation:jsr250-api:$javaxAnnotationVersion",
+            javaxInject       : "javax.inject:javax.inject:$javaxInjectoVersion",
+            androidAnnotations: "androidx.annotation:annotation:$androidAnnotationVersion",
+            okhttp            : "com.squareup.okhttp3:okhttp:$okhttpVersion",
+            okhttpInterceptor : "com.squareup.okhttp3:logging-interceptor:$okhttpVersion",
+            retrofit          : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitConverter : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            retrofitAdapter   : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    ]
+
+    remoteTestDependencies = [
+            junit        : "junit:junit:$junit",
+            assertJ      : "org.assertj:assertj-core:$assertj",
+            mockitoKotlin: "org.mockito.kotlin:mockito-kotlin:$mockitoKotlinVersion",
+            testRunner   : "androidx.test:runner:$axTestRunner",
+            testRules    : "androidx.test:rules:$axTestRules"
     ]
 }
