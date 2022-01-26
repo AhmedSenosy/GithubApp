@@ -7,23 +7,43 @@ project.ext {
     kotlinVersion = '1.7.0'
     //Libraries
     supportLibraryVersion= '26.0.1'
-    rxJava = '3.0.0'
+    rxJava = '3.0.1'
     javaxAnnotationVersion ='1.0'
     javaxInjectoVersion ='1'
+    rxKotlinVersion = '2.1.0'
+    androidAnnotationVersion = '21.0.3'
+    daggerVersion = '2.11'
     //test
     junit = '4.13.2'
-    mockito ='4.0.0'
+    mockitoVersion ='4.3.1'
     assertj = '3.22.0'
+    robolectricVersion ='3.4.2'
+    mockitoKotlinVersion = '4.0.0'
+    mockitoInline ='2.13.0'
     //DomainDependencies
     domainDependencies =[
-            rxJava: "io.reactivex.rxjava3:rxjava:${rxJava}",
+            rxJava: "io.reactivex.rxjava3:rxkotlin:${rxJava}",
             javaInject: "javax.inject:javax.inject:${javaxInjectoVersion}",
             javaxAnnotation:"javax.annotation:jsr250-api:${javaxAnnotationVersion}"
     ]
     //domain test dependencies
     domainTestDependencies =[
             junit : "junit:junit:${junit}",
-            mockito : "org.mockito.kotlin:mockito-kotlin:${mockito}",
+            mockito : "org.mockito.kotlin:mockito-kotlin:${mockitoKotlinVersion}",
             assertj: "org.assertj:assertj-core:${assertj}"
+    ]
+    //dataDependencies
+    dataDependencies =[
+            javaInject: "javax.inject:javax.inject:${javaxInjectoVersion}",
+            javaxAnnotation:"javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            rxJava: "io.reactivex.rxjava3:rxkotlin:${rxJava}",
+    ]
+    //data test dependencies
+    dataTestDependencies =[
+            junit : "junit:junit:${junit}",
+            mockito : "org.mockito.kotlin:mockito-kotlin:${mockitoKotlinVersion}",
+            assertj: "org.assertj:assertj-core:${assertj}",
+            robolectric:"org.robolectric:robolectric:${robolectricVersion}",
+            inline : "org.mockito:mockito-inline:${mockitoInline}"
     ]
 }
