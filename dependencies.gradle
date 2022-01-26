@@ -19,6 +19,8 @@ project.ext {
     retrofitVersion = '2.3.0'
 
     roomVersion = '2.1.0-alpha03'
+    lifecycleVersion = '2.1.0-alpha01'
+    arcCompVersion = '1.0.0'
     //test
     junit = '4.13.2'
     mockitoVersion = '4.3.1'
@@ -103,5 +105,26 @@ project.ext {
             testRules    : "androidx.test:rules:$axTestRules",
             testCore     : "androidx.test:core:$axTestCore",
             robolectric  : "org.robolectric:robolectric:$robolectricVersion"
+    ]
+
+    presentationDependencies = [
+            daggerCompiler     : "com.google.dagger:dagger-compiler:$daggerVersion",
+            dagger             : "com.google.dagger:dagger:$daggerVersion",
+            rxJava            : "io.reactivex.rxjava3:rxkotlin:${rxJava}",
+            rxjava2          : "io.reactivex.rxjava2:rxkotlin:2.0.0",
+            javaxAnnotations   : "javax.annotation:jsr250-api:$javaxAnnotationVersion",
+            javaxInject        : "javax.inject:javax.inject:$javaxInjectoVersion",
+            androidAnnotations : "androidx.annotation:annotation:$androidAnnotationVersion",
+            lifecycleRuntime   : "androidx.lifecycle:lifecycle-runtime:$lifecycleVersion",
+            lifecycleExtensions: "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion",
+            lifecycleCommon    : "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
+    ]
+
+    presentationTestDependencies = [
+            junit        : "junit:junit:$junit",
+            assertJ      : "org.assertj:assertj-core:$assertj",
+            mockitoKotlin: "org.mockito.kotlin:mockito-kotlin:$mockitoKotlinVersion",
+            robolectric  : "org.robolectric:robolectric:$robolectricVersion",
+            archTesting  : "androidx.arch.core:core-testing:$archCoreTestingVersion"
     ]
 }
